@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cod-Inventory - Pastel Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2></h2>
+            </div>
+            <ul>
+                <li class="active">Inventory</li>
+                <li>Orders</li>
+                <li>Order History</li>
+                <li>Issued Items</li>
+                <li>Users</li>
+                <li>Admin Actions</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Inventory Management System</h1>
+                <button class="add-btn" onclick="openAddModal()">Add Items</button>
+            </div>
+
+            <!-- Table to Display Products -->
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Item Name</th>
+                        <th>Item Cost</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Available</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal for Adding Product -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddModal()">&times;</span>
+            <h2>Add New Product</h2>
+            <form id="addProductForm">
+                <input type="text" name="item_name" placeholder="Item Name" required>
+                <input type="number" name="item_cost" placeholder="Item Cost" required>
+                <input type="text" name="description" placeholder="Description" required>
+                <input type="number" name="quantity" placeholder="Quantity" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
